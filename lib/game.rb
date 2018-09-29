@@ -84,11 +84,11 @@ def start
   when "1"
     puts "Choose your alliance! X - O ?"
     side = gets.chomp
-    if side == "X"
+    if side == "X" || side == "x"
       @player_2 = Computer.new("O")
       @player_2.board = self.board
-      elsif side == "O"
-      @player_1 = Computer.new("O")
+      elsif side == "O" || side == "o"
+      @player_1 = Computer.new("X")
       @player_1.board = self.board
     else 
       puts "That alliance doesn't exist..."
